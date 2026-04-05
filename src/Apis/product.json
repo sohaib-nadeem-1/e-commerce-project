@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop",
+    "price": 49999,
+    "oldPrice": 99999,
+    "stock": 50,
+    "category": "Computers",
+    "image": "./images/macbook.png",
+    "description": "Powerful laptop with i5 processor, 8GB RAM, 256GB SSD."
+  },
+  {
+    "id": 2,
+    "name": "Smartphone",
+    "price": 19999,
+    "oldPrice": 39999,
+    "stock": 30,
+    "category": "Electronics",
+    "image": "./images/i18.png",
+    "description": "Latest smartphone with great camera and battery life."
+  },
+  {
+    "id": 3,
+    "name": "Headphones",
+    "price": 1999,
+    "oldPrice": 3999,
+    "stock": 100,
+    "category": "Audio",
+    "image": "./images/airpod.png",
+    "description": "Wireless headphones with noise cancellation."
+  },
+  {
+    "id": 4,
+    "name": "LED",
+    "price": 33000,
+    "oldPrice": 53000,
+    "stock": 25,
+    "category": "Computers",
+    "image": "./images/led.png",
+    "description": "Track your fitness and notifications easily."
+  },
+  {
+    "id": 5,
+    "name": "Gaming Mouse",
+    "price": 4999,
+    "oldPrice": 10500,
+    "stock": 80,
+    "category": "Gaming",
+    "image": "./images/mouse.png",
+    "description": "High precision mouse for gaming."
+  },
+  {
+    "id": 6,
+    "name": "Keyboard",
+    "price": 2999,
+    "oldPrice": 3599,
+    "stock": 60,
+    "category": "Accessories",
+    "image": "./images/keyboard.png",
+    "description": "Mechanical keyboard with RGB lights."
+  }
+  
+]
