@@ -18,6 +18,7 @@ export function showCards(data) {
         card.setAttribute("id", `card${id}`);
         productClone.querySelector(".badge").textContent = category;
         productClone.querySelector(".product-img").src = image;
+        console.log("Image path:", image);
         productClone.querySelector(".name").textContent = name;
         productClone.querySelector(".desc").textContent = description;
         productClone.querySelector(".newprice").textContent = `Rs.${price}`;

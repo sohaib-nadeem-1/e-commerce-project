@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Micro+5&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Micro+5&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="main-container">
+
+        <section login-page>
+
+            <div class="parent-login-pg">
+                <div class="parent-login-chld-1">
+                    <p>Free Shipping 30 day Return or Refund Guarantee</p>
+                </div>
+                <div class="parent-login-chld-2"><button class="sgn-btn">Sign Up</button><button class="lgn-btn">Log
+                        In</button></div>
+            </div>
+
+        </section>
+        <!-- <h1>hahhahah</h1> -->
+  <section id="Navbar">
+    <div class="nav-parent">
+        <div id="nav-child-1">
+            <p>SuhaibStore</p>
+        </div>
+        <div class="nav-child-2">
+            <ul>
+                <li><a href="./index.html" onclick="sessionStorage.setItem('scrollTo', 'home')">Home</a></li>
+                <li><a href="./index.html" onclick="sessionStorage.setItem('scrollTo', 'features')">About</a></li>
+                <li><a href="./index.html" onclick="sessionStorage.setItem('scrollTo', 'cardss')">Products</a></li>
+                <li><a href="./index.html" onclick="sessionStorage.setItem('scrollTo', 'foot')">Contacts</a></li>
+              <button class="nav-btn">
+    <!-- <i class="fa-solid fa-cart-arrow-down"> -->
+        <img class="img-cart"  src="images/shopping-cart.png" alt="">
+        <span class="productNum"></span>
+    </i>
+</button>
+            </ul>
+        </div>
+    </div>
+</section>
+
+         <template id="productCartTemplate">
+
+        <div class="hero-sec-2">
+            <div class="hero-sec-2-content">
+
+                <div class="cart-container">
+           
+                    <div class="cart-card">
+
+                        <div class="cart-card__left">
+                            <span class="cart-card__badge"></span>
+                            <img src="" alt="product" class="cart-card__img">
+
+                            <div class="cart-card__info">
+                                <h3></h3>
+                            </div>
+                        </div>
+                        <div class="cart-card__right">
+                            <div class="cart-card__price">2499.95</div>
+
+                            <div class="cart-card__quantity">
+                                <button class="cart-card__btn">+</button>
+                                <span class="cart-card__qty">5</span>
+                                <button class="cart-card__btn">-</button>
+                            </div>
+
+                            <button class="cart-card__remove">Remove</button>
+                        </div>
+
+                    </div>
+                   
+
+
+
+                </div>
+            </div>
+        </div>
+</template>
+
+
+<!-- <div class="hero-sec-2">
+            <div class="hero-sec-2-content">
+
+                <div class="cart-container">
+           
+                    <div class="cart-card">
+
+                        <div class="cart-card__left">
+                            <span class="cart-card__badge">Mobiles</span>
+                            <img src="images/iphonee.png" alt="product" class="cart-card__img">
+
+                            <div class="cart-card__info">
+                                <h3>Smartphone</h3>
+                            </div>
+                        </div>
+                        <div class="cart-card__right">
+                            <div class="cart-card__price">2499.95</div>
+
+                            <div class="cart-card__quantity">
+                                <button class="cart-card__btn">+</button>
+                                <span class="cart-card__qty">5</span>
+                                <button class="cart-card__btn">-</button>
+                            </div>
+
+                            <button class="cart-card__remove">Remove</button>
+                        </div>
+
+                    </div>
+                   
+
+
+
+                </div>
+            </div>
+        </div> -->
+        <div id="productCartContainer">
+    <!-- cards yahan add honge -->
+</div>
+        <!-- ORDER SUMMARY -->
+
+        <div class="order-summary-parent">
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <div class="summary-row">
+                    <span>Total Items</span>
+                    <span id="totalItems">0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">Rs. 0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span style="color:green; font-weight:700;">FREE</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <span id="grandTotal">Rs. 0</span>
+                </div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+                <a href="index.html" class="continue-link">← Continue Shopping</a>
+            </div>
+
+        </div>
+
+
+        <section id="foot">
+            <footer class="footer">
+
+                <div class="footer-wrapper">
+
+                    <!-- Brand -->
+                    <div class="footer-brand">
+                        <h2>SohaibStore</h2>
+                        <p>
+                            Premium gadgets and modern tech solutions designed to elevate your everyday life.
+                        </p>
+                    </div>
+
+                    <!-- Links -->
+                    <div class="footer-links">
+                        <div>
+                            <h4>Company</h4>
+                            <a href="#">About</a>
+                            <a href="#">Careers</a>
+                            <a href="#">Blog</a>
+                        </div>
+
+                        <div>
+                            <h4>Support</h4>
+                            <a href="#">Help Center</a>
+                            <a href="#">Returns</a>
+                            <a href="#">Shipping</a>
+                        </div>
+
+                        <div>
+                            <h4>Legal</h4>
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Terms</a>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="footer-newsletter">
+                        <h4>Stay Updated</h4>
+                        <p>Subscribe for latest products & offers</p>
+
+                        <div class="input-box">
+                            <input type="email" placeholder="Enter your email">
+                            <button>→</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Bottom -->
+                <div class="footer-bottom">
+                    <p>© 2026 SohaibStore. All rights reserved.</p>
+                </div>
+
+            </footer>
+        </section>
+    </div>
+
+    <script type="module" src="addCartFunction.js"></script>
+</body>
+
+</html>

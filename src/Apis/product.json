@@ -1,3 +1,5 @@
+
+
 [
   {
     "id": 1,
@@ -49,15 +51,38 @@
     "image": "./images/mouse.png",
     "description": "High precision mouse for gaming."
   },
+ {
+  "id": 6,
+  "name": "Keyboard",
+  "price": 2999,
+  "oldPrice": 3599,
+  "stock": 60,
+  "category": "Accessories",
+  "image": "./images/keyboard.png",
+  "description": "Mechanical keyboard with RGB lights."
+},
+
+
   {
-    "id": 6,
-    "name": "Keyboard",
-    "price": 2999,
-    "oldPrice": 3599,
-    "stock": 60,
-    "category": "Accessories",
-    "image": "./images/keyboard.png",
-    "description": "Mechanical keyboard with RGB lights."
-  }
-  
+  "id": 7,
+  "name": "Gaming Chair",
+  "price": 15999,
+  "oldPrice": 25999,
+  "stock": 25,
+  "category": "Furniture",
+  "image": "./images/chair.png",
+  "description": "Ergonomic gaming chair with lumbar support and adjustable height."
+},
+{
+  "id": 8,
+  "name": "Smart Watch",
+  "price": 12999,
+  "oldPrice": 19999,
+  "stock": 45,
+  "category": "Wearables",
+  "image": "./images/watch.png",
+  "description": "Stylish smartwatch with heart rate monitor and fitness tracking."
+}
 ]
+
+

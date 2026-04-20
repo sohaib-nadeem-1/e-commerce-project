@@ -4,418 +4,380 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SuhaibStore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/all.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Micro+5&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Micro+5&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
+    <div id="scroll-progress"></div>
     <div class="main-container">
 
-
-
-        <section login-page>
-
+        <!-- Top Bar -->
+        <section class="login-page">
             <div class="parent-login-pg">
                 <div class="parent-login-chld-1">
-                    <p>Free Shipping 30 day Return or Refund Guarantee</p>
+                    <p>Free Shipping &bull; 30 Day Return or Refund Guarantee</p>
                 </div>
-                <div class="parent-login-chld-2"><button class="sgn-btn">Sign Up</button><button class="lgn-btn">Log
-                        In</button></div>
+                <div class="parent-login-chld-2">
+                    <button class="sgn-btn">Sign Up</button>
+                    <button class="lgn-btn">Log In</button>
+                </div>
             </div>
-
         </section>
+
+        <!-- Navbar -->
         <section id="Navbar">
             <div class="nav-parent">
                 <div id="nav-child-1">
                     <p>SuhaibStore</p>
                 </div>
-                <div class="nav-child-2">
+                <button class="hamburger" id="hamburger" aria-label="Open menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <div class="nav-child-2" id="navMenu">
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Products</a></li>
-                        <!-- <li><a href="">Services</a></li> -->
-                        <li><a href="">Contacts</a></li>
-                        <button class="nav-btn"><i class="fa-solid fa-cart-arrow-down"></i> 6</button>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#features">About</a></li>
+                        <li><a href="#cardss">Products</a></li>
+                        <li><a href="#foot">Contacts</a></li>
                     </ul>
+                    <button class="nav-btn">
+                        <img class="img-cart" src="images/shopping-cart.png" alt="">
+                        <span class="productNum"></span>
+                    </button>
                 </div>
             </div>
         </section>
+
+        <!-- Hero Section -->
         <section id="HeroScetion">
             <div class="main-hero-div">
                 <div class="hero-parent">
-                    <div class="hero-child-1">
+                    <div class="hero-child-1 reveal from-left">
+                        <p class="hero-tagline">Explore The New Items In Tech Industry</p>
+                        <h1 class="hero-heading">Your Destination For Cutting-Edge Gadgets!</h1>
+                        <p class="hero-para">Welcome to SuhaibStore — your gateway to knowledge and skill development. We are dedicated to providing high-quality products that meet every user requirement.</p>
 
-
-                        <p style="font-size: 1rem; line-height: 1rem; letter-spacing: 0.1rem;">Explore The New Items In
-                            Tech Industry </p>
-                        <h1 class="hero-heading">Your Destination For Cutting-Edge Gadgets! </h1>
-                        <p class="hero-para">Welcome to CodeWithSohaib your gateway to knowldege and skill devlopment.We
-                            are dedicated to provide high skill work that meet user requirement </p>
-                        <br>
-                        <p class="hero-section-btn">Explore Our Products</p>
-
+                        <!-- ✅ FIXED: Explore button with smooth scroll -->
+                        <a href="#cardss" class="hero-section-btn" style="text-decoration:none; cursor:pointer;">Explore Our Products</a>
                     </div>
-                    <div class="hero-child-2"><img src="images/hro-section-img-removebg-preview.png" class="hero-img"
-                            alt="Profile Img"></div>
+                    <div class="hero-child-2 reveal from-right">
+                        <img src="images/hro-section-img-removebg-preview.png" class="hero-img" alt="Hero Product">
+                    </div>
                 </div>
             </div>
         </section>
-        <section about>
+
+        <!-- About / Promo Cards -->
+        <section id="about">
             <div class="main-about">
                 <div class="about-Parent">
-                    <div class="about-card-1">
+                    <div class="about-card-1 reveal d1">
                         <div class="card-chlid-1">
                             <p class="sale">New Year Sale</p>
-                            <p class="discount">Get And Extra 50% Off</p>
-                            <p class="shopping">SHOW NOW</p>
+                            <p class="discount">Get An Extra 50% Off</p>
+                            <p class="shopping" onclick="showModal('images/macbook.png', 'MacBook — 50% Off!')">SHOP NOW</p>
                         </div>
                         <div class="card-chlid-2">
-                            <img class="img-card-1" src="images/macbook.png" alt="">
+                            <img class="img-card-1" src="images/macbook.png" alt="MacBook">
                         </div>
                     </div>
-                    <div class="about-card-1">
+                    <div class="about-card-1 reveal d2">
                         <div class="card-chlid-1">
                             <p class="sale">New Year Sale</p>
-                            <p class="discount">Get And Extra 50% Off</p>
-                            <p class="shopping">SHOW NOW</p>
+                            <p class="discount">Get An Extra 50% Off</p>
+                            <p class="shopping" onclick="showModal('images/airpod.png', 'AirPods — 50% Off!')">SHOP NOW</p>
                         </div>
                         <div class="card-chlid-2">
-                            <img class="img-card-1" src="images/airpod.png" alt="">
+                            <img class="img-card-1" src="images/airpod.png" alt="AirPods">
                         </div>
                     </div>
-                    <div class="about-card-1">
+                    <div class="about-card-1 reveal d3">
                         <div class="card-chlid-1">
                             <p class="sale">New Year Sale</p>
-                            <p class="discount">Get And Extra 50% Off</p>
-                            <p class="shopping">SHOW NOW</p>
+                            <p class="discount">Get An Extra 50% Off</p>
+                            <p class="shopping" onclick="showModal('images/iphone.png', 'iPhone — 50% Off!')">SHOP NOW</p>
                         </div>
                         <div class="card-chlid-2">
-                            <img class="img-card-1" src="images/iphone.png" alt="">
+                            <img class="img-card-1" src="images/iphone.png" alt="iPhone">
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
 
-        <section services>
+        <!-- Services -->
+        <section class="services">
             <div class="main-service-sec">
                 <div class="serv-sec-parent">
-                    <div class="sec-card-1">
-                        <div class=""><i class=" fa-solid fa-truck-fast"></i></div>
-                        <p style="margin: 0;">WorldWide Shipping Order Above 100+</p>
+                    <div class="sec-card-1 reveal d1">
+                        <img class="service-img" src="images/delivery-truck_962834.png" alt="">
+                        <p>WorldWide Shipping <span>Orders Above ₨100+</span></p>
                     </div>
-                    <div class="sec-card-1">
-                        <div class=""><i class="fa-solid fa-rotate-left"></i></i></div>
+                    <div class="sec-card-1 reveal d2">
+                        <img class="service-img" src="images/product-return_4989753.png" alt="">
                         <p>Easy 30 Day Returns <span>Back Returns In 7 Days</span></p>
-
                     </div>
-                    <div class="sec-card-1">
-                        <div class=""><i class="fa-solid fa-hand-holding-dollar"></i></i></div>
-                        <p>Money Back Guarantee <span>Guarantee With In 30-Days</span></p>
-
+                    <div class="sec-card-1 reveal d3">
+                        <img class="service-img" src="images/cashback_4947118.png" alt="">
+                        <p>Money Back Guarantee <span>Guarantee Within 30-Days</span></p>
                     </div>
-                    <div class="sec-card-1">
-                        <div class=""><i class="fa-solid fa-headset"></i></i></div>
+                    <div class="sec-card-1 reveal d4">
+                        <img class="service-img" src="images/customer-support_11980549.png" alt="">
                         <p>24/7 Customer Support <span>Instant Access to Support</span></p>
-
                     </div>
-
                 </div>
             </div>
         </section>
 
-        <section>
+        <!-- Products -->
+        <section id="cardss">
             <div class="parent-copies">
-                <div class="main-card-cpies" >
-
+                <div class="main-card-cpies">
+                    <!-- Cards injected by JS -->
                 </div>
             </div>
         </section>
-        <!-- Card 1 -->
-       
-            
-            <div class="main-cards-conatainer">
-                 <template class="templateclone">
-                <div class="card" , id="cardValue">
-                    <span class="badge"></span>
-                    <img src="" alt="Laptop" class="product-img">
-                    <h2 class="name">Laptop</h2>
-                    <div class="stars">★★★★★</div>
-                    <p class="desc">
-                        Powerful laptop with a quad-core i5 processor, 8GB RAM, 256GB SSD, and a 14-inch FHD
-                        display.
-                    </p>
-                    <div class="price">
-                        <span class="newprice"></span>
-                        <span class="old"></span>
-                    </div>
-                    <p class="stock">Total Stocks Available: <span class="productStock"
-                        >50</span></p>
-                    <div class="quantity">
-                        <p>Quantity(Pieces) </p>
-                        <div class="quantity-child-1">
-                            <button class="decrement">-</button>
-                            <span class="quant">1</span>
-                            <button class="increment">+</button>
-                        </div>
-                    </div>
-                    <button class="cart-btn">
-                        🛒 Add To Cart
-                    </button>
-                </div>
-</template>
 
+        <!-- Card Template -->
+        <template class="templateclone">
+            <div class="card" id="cardValue">
+                <span class="badge"></span>
+                <img src="" alt="Product" class="product-img">
+                <h2 class="name">Product Name</h2>
+                <div class="stars">★★★★★</div>
+                <p class="desc">Powerful product with amazing features and great value for money.</p>
+                <div class="price">
+                    <span class="newprice"></span>
+                    <span class="old"></span>
+                </div>
+                <p class="stock">Total Stocks Available: <span class="productStock">50</span></p>
+                <div class="quantity">
+                    <p>Quantity</p>
+                    <div class="quantity-child-1">
+                        <button class="decrement">-</button>
+                        <span class="quant">1</span>
+                        <button class="increment">+</button>
+                    </div>
+                </div>
+                <button class="cart-btn">🛒 Add To Cart</button>
             </div>
         </template>
 
+        <!-- Stats Ticker -->
+        <section class="stats-section" aria-label="Company statistics">
+            <div class="stats-track" id="statsTrack">
+                <div class="stat-item"><div class="stat-content"><span class="stat-value">10,000+</span><span class="stat-label">Products Sold</span></div></div>
+                <div class="stat-item"><div class="stat-content"><span class="stat-value">5,000+</span><span class="stat-label">Happy Customers</span></div></div>
+                <div class="stat-item"><div class="stat-content"><span class="stat-value">2,000+</span><span class="stat-label">Orders Completed</span></div></div>
+                <div class="stat-item"><div class="stat-content"><span class="stat-value">₨ 1M+</span><span class="stat-label">Total Revenue</span></div></div>
+                <div class="stat-item"><div class="stat-content"><span class="stat-value">4.9 / 5</span><span class="stat-label">Average Rating</span></div></div>
+                <div class="stat-item"><div class="stat-content"><span class="stat-value">98%</span><span class="stat-label">On-Time Delivery</span></div></div>
+                <div class="stat-item"><div class="stat-content"><span class="stat-value">85%</span><span class="stat-label">Repeat Customers</span></div></div>
+                <div class="stat-item"><div class="stat-content"><span class="stat-value">10,000+</span><span class="stat-label">Products Sold</span></div></div>
+                <div class="stat-item"><div class="stat-content"><span class="stat-value">5,000+</span><span class="stat-label">Happy Customers</span></div></div>
+                <div class="stat-item"><div class="stat-content"><span class="stat-value">2,000+</span><span class="stat-label">Orders Completed</span></div></div>
+                <div class="stat-item"><div class="stat-content"><span class="stat-value">₨ 1M+</span><span class="stat-label">Total Revenue</span></div></div>
+                <div class="stat-item"><div class="stat-content"><span class="stat-value">4.9 / 5</span><span class="stat-label">Average Rating</span></div></div>
+                <div class="stat-item"><div class="stat-content"><span class="stat-value">98%</span><span class="stat-label">On-Time Delivery</span></div></div>
+                <div class="stat-item"><div class="stat-content"><span class="stat-value">85%</span><span class="stat-label">Repeat Customers</span></div></div>
+            </div>
+        </section>
 
-        
-<section class="stats-section" aria-label="Company statistics">
-  <div class="stats-track" id="statsTrack">
- 
-    <!-- FIRST SET -->
-    <div class="stat-item">
-      <div class="stat-content">
-        <!-- <span class="stat-icon">📦</span> -->
-        <span class="stat-value">10,000+</span>
-        <span class="stat-label">Products Sold</span>
-      </div>
-    </div>
- 
-    <div class="stat-item">
-      <div class="stat-content">
-        <!-- <span class="stat-icon">🌟</span> -->
-        <span class="stat-value">5,000+</span>
-        <span class="stat-label">Happy Customers</span>
-      </div>
-    </div>
- 
-    <div class="stat-item">
-      <div class="stat-content">
-        <!-- <span class="stat-icon">✅</span> -->
-        <span class="stat-value">2,000+</span>
-        <span class="stat-label">Orders Completed</span>
-      </div>
-    </div>
- 
-    <div class="stat-item">
-      <div class="stat-content">
-        <!-- <span class="stat-icon">💰</span> -->
-        <span class="stat-value">₨ 1M+</span>
-        <span class="stat-label">Total Revenue</span>
-      </div>
-    </div>
- 
-    <div class="stat-item">
-      <div class="stat-content">
-        <!-- <span class="stat-icon">⭐</span> -->
-        <span class="stat-value">4.9 / 5</span>
-        <span class="stat-label">Average Rating</span>
-      </div>
-    </div>
- 
-    <div class="stat-item">
-      <div class="stat-content">
-        <!-- <span class="stat-icon">🚀</span> -->
-        <span class="stat-value">98%</span>
-        <span class="stat-label">On-Time Delivery</span>
-      </div>
-    </div>
- 
-    <div class="stat-item">
-      <div class="stat-content">
-        <!-- <span class="stat-icon">🔄</span> -->
-        <span class="stat-value">85%</span>
-        <span class="stat-label">Repeat Customers</span>
-      </div>
-    </div>
- 
-    <!-- DUPLICATE SET for seamless loop -->
-    <div class="stat-item">
-      <div class="stat-content">
-        <!-- <span class="stat-icon">📦</span> -->
-        <span class="stat-value">10,000+</span>
-        <span class="stat-label">Products Sold</span>
-      </div>
-    </div>
- 
-    <div class="stat-item">
-      <div class="stat-content">
-        <!-- <span class="stat-icon">🌟</span> -->
-        <span class="stat-value">5,000+</span>
-        <span class="stat-label">Happy Customers</span>
-      </div>
-    </div>
- 
-    <div class="stat-item">
-      <div class="stat-content">
-        <!-- <span class="stat-icon">✅</span> -->
-        <span class="stat-value">2,000+</span>
-        <span class="stat-label">Orders Completed</span>
-      </div>
-    </div>
- 
-    <div class="stat-item">
-      <div class="stat-content">
-        <!-- <span class="stat-icon">💰</span> -->
-        <span class="stat-value">₨ 1M+</span>
-        <span class="stat-label">Total Revenue</span>
-      </div>
-    </div>
- 
-    <div class="stat-item">
-      <div class="stat-content">
-        <!-- <span class="stat-icon">⭐</span> -->
-        <span class="stat-value">4.9 / 5</span>
-        <span class="stat-label">Average Rating</span>
-      </div>
-    </div>
- 
-    <div class="stat-item">
-      <div class="stat-content">
-        <!-- <span class="stat-icon">🚀</span> -->
-        <span class="stat-value">98%</span>
-        <span class="stat-label">On-Time Delivery</span>
-      </div>
-    </div>
- 
-    <div class="stat-item">
-      <div class="stat-content">
-        <!-- <span class="stat-icon">🔄</span> -->
-        <span class="stat-value">85%</span>
-        <span class="stat-label">Repeat Customers</span>
-      </div>
-    </div>
- 
-  </div>
-</section>
+        <!-- Features / About -->
+        <section id="features">
+            <div class="left">
+                <div class="feature reveal from-left d1">
+                    <h4>1</h4>
+                    <h3>Wide Selection</h3>
+                    <p>Suhaib Store offers a diverse range of gadgets from smartphones to smart home devices.</p>
+                </div>
+                <div class="feature reveal from-left d2">
+                    <h4>2</h4>
+                    <h3>Quality Assurance</h3>
+                    <p>Every gadget undergoes rigorous quality checks ensuring reliability and performance.</p>
+                </div>
+                <div class="feature reveal from-left d3">
+                    <h4>3</h4>
+                    <h3>Competitive Prices</h3>
+                    <p>Enjoy great value with competitive pricing on high-quality gadgets.</p>
+                </div>
+            </div>
+            <div class="center reveal zoom">
+                <img src="images/about-img-removebg-preview.png" alt="About us">
+            </div>
+            <div class="right">
+                <div class="feature reveal from-right d1">
+                    <h4>4</h4>
+                    <h3>Expert Guidance</h3>
+                    <p>Our staff provides expert guidance to help you choose the right product.</p>
+                </div>
+                <div class="feature reveal from-right d2">
+                    <h4>5</h4>
+                    <h3>Convenient Shopping</h3>
+                    <p>User-friendly website ensures smooth shopping experience.</p>
+                </div>
+                <div class="feature reveal from-right d3">
+                    <h4>6</h4>
+                    <h3>Excellent Service</h3>
+                    <p>We provide excellent customer support and fast delivery.</p>
+                </div>
+            </div>
+        </section>
 
+        <!-- Footer -->
+        <section id="foot">
+            <footer class="footer">
+                <div class="footer-wrapper">
+                    <div class="footer-brand">
+                        <h2>SohaibStore</h2>
+                        <p>Premium gadgets and modern tech solutions designed to elevate your everyday life.</p>
+                    </div>
+                    <div class="footer-links">
+                        <div>
+                            <h4>Company</h4>
+                            <a href="#">About</a>
+                            <a href="#">Careers</a>
+                            <a href="#">Blog</a>
+                        </div>
+                        <div>
+                            <h4>Support</h4>
+                            <a href="#">Help Center</a>
+                            <a href="#">Returns</a>
+                            <a href="#">Shipping</a>
+                        </div>
+                        <div>
+                            <h4>Legal</h4>
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Terms</a>
+                        </div>
+                    </div>
+                    <div class="footer-newsletter">
+                        <h4>Stay Updated</h4>
+                        <p>Subscribe for latest products &amp; offers</p>
+                        <div class="input-box">
+                            <input type="email" placeholder="Enter your email">
+                            <button>→</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2026 SohaibStore. All rights reserved.</p>
+                </div>
+            </footer>
+        </section>
 
-<section class="features">
-
-  <!-- LEFT SIDE -->
-  <div class="left">
-    <div class="feature">
-      <h4>1</h4>
-      <h3>Wide Selection</h3>
-      <p>Suhaib Store offers a diverse range of gadgets from smartphones to smart home devices.</p>
     </div>
 
-    <div class="feature">
-      <h4>2</h4>
-      <h3>Quality Assurance</h3>
-      <p>Every gadget undergoes rigorous quality checks ensuring reliability and performance.</p>
+    <!-- Shop Now Image Modal -->
+    <div id="imageModal" style="
+        display:none; position:fixed; inset:0;
+        background:rgba(0,0,0,0.85); z-index:99999;
+        justify-content:center; align-items:center;">
+        <div style="
+            position:relative; background:white; border-radius:12px;
+            padding:2rem; max-width:420px; width:90%;
+            animation: modalPop 0.3s cubic-bezier(0.22,1,0.36,1);">
+            <button onclick="closeModal()" style="
+                position:absolute; top:12px; right:16px;
+                background:none; border:none; font-size:1.6rem;
+                cursor:pointer; color:#333; line-height:1;">✕</button>
+            <img id="modalImg" src="" alt="Product" style="
+                width:100%; object-fit:contain;
+                max-height:280px; border-radius:8px;">
+            <p id="modalText" style="
+                text-align:center; margin-top:1rem;
+                font-weight:800; font-size:1.1rem;
+                color:#000a19; font-family:'Nunito',sans-serif;"></p>
+            <a href="#cardss" onclick="closeModal()" style="
+                display:block; text-align:center; margin-top:1rem;
+                padding:10px; background:#0062ff; color:white;
+                border-radius:6px; text-decoration:none;
+                font-weight:700; font-family:'Nunito',sans-serif;
+                transition:background 0.25s;">
+                🛒 Shop Now
+            </a>
+        </div>
     </div>
 
-    <div class="feature">
-      <h4>3</h4>
-      <h3>Competitive Prices</h3>
-      <p>Enjoy great value with competitive pricing on high-quality gadgets.</p>
-    </div>
-  </div>
+    <style>
+        @keyframes modalPop {
+            from { opacity:0; transform:scale(0.85); }
+            to   { opacity:1; transform:scale(1); }
+        }
+        .fa-solid, .fas {
+            font-family: "Font Awesome 6 Free" !important;
+            font-weight: 900 !important;
+        }
+    </style>
 
-  <!-- CENTER IMAGE -->
-  <div class="center">
-    <img src="images/about-img-removebg-preview.png" alt="center image">
-  </div>
+    <script type="module" src="index.js"></script>
 
-  <!-- RIGHT SIDE -->
-  <div class="right">
-    <div class="feature">
-      <h4>4</h4>
-      <h3>Expert Guidance</h3>
-      <p>Our staff provides expert guidance to help you choose the right product.</p>
-    </div>
+    <script>
+        // Shop Now Modal
+        function showModal(imgSrc, title) {
+            document.getElementById('modalImg').src = imgSrc;
+            document.getElementById('modalText').textContent = title;
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'flex';
+        }
 
-    <div class="feature">
-      <h4>5</h4>
-      <h3>Convenient Shopping</h3>
-      <p>User-friendly website ensures smooth shopping experience.</p>
-    </div>
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
 
-    <div class="feature">
-      <h4>6</h4>
-      <h3>Excellent Service</h3>
-      <p>We provide excellent customer support and fast delivery.</p>
-    </div>
-  </div>
+        document.getElementById('imageModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
 
-</section>
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeModal();
+        });
 
+        // Hamburger menu
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('open');
+            hamburger.classList.toggle('active');
+        });
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('open');
+                hamburger.classList.remove('active');
+            });
+        });
 
+        // ✅ Smooth scroll for ALL anchor links (including Explore Our Products)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
 
-<footer class="footer">
+        // Scroll progress bar
+        const bar = document.getElementById('scroll-progress');
+        window.addEventListener('scroll', () => {
+            const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+            bar.style.width = pct + '%';
+        });
 
-  <div class="footer-wrapper">
-
-    <!-- Brand -->
-    <div class="footer-brand">
-      <h2>SohaibStore</h2>
-      <p>
-        Premium gadgets and modern tech solutions designed to elevate your everyday life.
-      </p>
-    </div>
-
-    <!-- Links -->
-    <div class="footer-links">
-      <div>
-        <h4>Company</h4>
-        <a href="#">About</a>
-        <a href="#">Careers</a>
-        <a href="#">Blog</a>
-      </div>
-
-      <div>
-        <h4>Support</h4>
-        <a href="#">Help Center</a>
-        <a href="#">Returns</a>
-        <a href="#">Shipping</a>
-      </div>
-
-      <div>
-        <h4>Legal</h4>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms</a>
-      </div>
-    </div>
-
-    <!-- Newsletter -->
-    <div class="footer-newsletter">
-      <h4>Stay Updated</h4>
-      <p>Subscribe for latest products & offers</p>
-
-      <div class="input-box">
-        <input type="email" placeholder="Enter your email">
-        <button>→</button>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Bottom -->
-  <div class="footer-bottom">
-    <p>© 2026 SohaibStore. All rights reserved.</p>
-  </div>
-
-</footer>
-    </div>
-
-    <script type="module" src="main.js"></script>
+        // Reveal on scroll
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+            });
+        }, { threshold: 0.15 });
+        reveals.forEach(el => observer.observe(el));
+    </script>
 </body>
-
 </html>
