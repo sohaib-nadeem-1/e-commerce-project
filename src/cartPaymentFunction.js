@@ -96,26 +96,17 @@ export function showLocalStorageProducts(product) {
 
   showCartProduct();
 
-  // ✅ Checkout — empty cart check + cart clear + badge hide
+  // ✅ Checkout — cart check + redirect to payment page
   document.querySelector(".checkout-btn").addEventListener("click", () => {
     const cartData = getcardproduct();
 
     if (cartData.length === 0) {
-      showNotification("⚠️ Please select a product first!", "warning");
+      showNotification("⚠️ Cart is empty! Please add products first.", "warning");
       return;
     }
 
-    localStorage.removeItem("carddata");
-    showNotification("🚀 Your order is on the payment gateway!", "checkout");
-
-    document.querySelectorAll(".productNum").forEach(badge => {
-      badge.textContent = "";
-      badge.style.display = "none";
-    });
-
-    setTimeout(() => {
-      showCartProduct();
-    }, 1000);
+    // Payment page pe redirect karo
+    window.location.href = "./payment.html";
   });
 }
 
